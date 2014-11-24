@@ -1,0 +1,22 @@
+web:
+  build: .
+  links:
+   - db
+  volumes:
+   - /var/log:/var/www/logs
+  ports:
+   - "80:80"
+  environment:
+   - MYSQL_PASSWORD
+   - MY_BASE_URL
+db:
+  image: mysql
+  volumes:
+   - /var/lib/mysql:/var/lib/mysql
+  environment:
+   - MYSQL_DATABASE=dbpligg
+   - MYSQL_USER=pligguser
+   - MYSQL_ROOT_PASSWORD
+   - MYSQL_PASSWORD
+  ports:
+   - "3306:3306"
