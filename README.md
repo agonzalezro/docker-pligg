@@ -3,7 +3,7 @@ Dockerfile for pligg
 
 **Last Pligg version tested: 2.0.2**
 
-Pligg is an open source CMS that powers news and and user feedback websites.
+Pligg is an open source CMS that powers news and user feedback websites.
 
 Running it
 ----------
@@ -57,4 +57,11 @@ And now remove the `install` folder:
 If you want the manual process, just go to `http://1.2.3.4/install` (where
 `1.2.3.4` is the IP of your installation) and follow the steps.
 
-After do that you will need to removed the `install` folder as well.
+The DB settings will be (unless you changed some):
+
+- **Name**: dbpligg
+- **Username**: pligguser
+- **Password**: the same that you set with `$MYSQL_PASSWORD`
+- **Database server**: db
+
+After do that you will need to remove the `install` folder as well.
